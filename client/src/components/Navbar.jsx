@@ -1,6 +1,6 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom'
-import SlideShow from './SlideShow'
+import logo from '../assets/logo.png'
 export default function Navbar() {
 
     const [links,setLinks] = React.useState([
@@ -30,7 +30,9 @@ export default function Navbar() {
 
     return (
         <nav className='w-full h-full px-4 flex items-center justify-between bg-transparent'>
-            <div className='font-semibold text-xl text-slate-100'>Time For Cricket</div>
+            <div className='font-semibold text-xl text-slate-100 '>
+                <img src={logo} alt='logo' className='h-12 '/>
+            </div>
             <div className='flex items-center h-full justify-center gap-4'>
                 {links.map(link => (<div key={link.id}  className={`cursor-pointer duration-200 ease-in-out hover:scale-105 ${link.active?'text-primaryOrange font-bold text-xl':'text-slate-400 text-md'}`} onClick={()=>onLinkClick(link.id)}>{link.title}</div>))}
             </div>

@@ -34,7 +34,7 @@ export default function SlideShow() {
         autoPlay={true}
         autoPlaySpeed={1000}
         customTransition="all .5"
-        transitionDuration={500}
+        transitionDuration={1000}
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
         >
