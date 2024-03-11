@@ -4,11 +4,11 @@ import SlideShow from './components/SlideShow'
 
 export default function App() {
   return (
-    <div className='min-h-screen min-w-screen font-nunito bg-[rgba(0,0,0,0.9)]'>
-      <div className='h-12 w-full'>
+    <div className='min-h-screen min-w-screen font-nunito relative'>
+      <div className='h-12 w-full fixed z-[999]'>
         <Navbar />
       </div>
-      <div className='w-full min-h-screen'>
+      <div className='w-full min-h-screen absolute top-0'>
         <SlideShow />
       </div>
     </div>
