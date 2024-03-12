@@ -29,18 +29,18 @@ export default function SlideShow() {
     <div className='w-full min-h-screen'>
         <Carousel className='w-full h-full'
         responsive={responsive}
-        showDots={true}
         infinite={true}
         autoPlay={true}
         autoPlaySpeed={1000}
         customTransition="all .5"
         transitionDuration={1000}
         containerClass="carousel-container"
-        dotListClass="custom-dot-list-style"
+        arrows={false}
+        
         >
-            {slides.map(slide=>(<div key={slide} className='relative w-full h-[calc(100vh-48px)] flex items-center justify-center' >
+            {slides.map(slide=>(<div key={slide} className='relative w-full h-screen flex items-center justify-center' >
                 <img src={slide} alt={slide} className='w-auto h-auto'/>
-                <div className='absolute w-full h-full bg-slate-900 opacity-75'/>
+                <div className='absolute w-full h-full bg-black opacity-80'/>
             </div>))}
             
         </Carousel>

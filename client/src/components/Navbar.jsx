@@ -27,6 +27,7 @@ export default function Navbar() {
         const routeTo=selectedLink.to
         return navigate(routeTo)
     }
+    
 
     return (
         <nav className='w-full h-full px-4 flex items-center justify-between bg-transparent'>
