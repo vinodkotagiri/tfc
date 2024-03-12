@@ -40,7 +40,7 @@ export default function SlideShow() {
         >
             {slides.map(slide=>(<div key={slide} className='relative w-full h-screen flex items-center justify-center' >
                 <img src={slide} alt={slide} className='w-auto h-auto'/>
-                <div className='absolute w-full h-full bg-black opacity-80'/>
+                <div className='absolute w-full h-full bg-black opacity-50'/>
             </div>))}
             
         </Carousel>
