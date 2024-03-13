@@ -47,3 +47,5 @@ export class PostService {
       .exec();
   }
 }
+
+export default PostService

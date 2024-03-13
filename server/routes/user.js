@@ -1,20 +1,10 @@
 import { Router } from "express";
+// import AuthMiddleware from '../middleware/auth.js'
+import PostController from "../controllers/postController.js";
 const router=Router()
 
-router.get('/latest',(req,res)=>{
-    return res.status(200).json({Message:"LATEST"})
-})
-
-router.get('/top',(req,res)=>{
-    return res.status(200).json({Message:"TOP"})
-})
-
-router.get('/domestic',(req,res)=>{
-    return res.status(200).json({Message:"DOMESTIC"})
-})
-
-router.get('/international',(req,res)=>{
-    return res.status(200).json({Message:"INTERNATIONAL"})
-})
+router.get('/:tag',PostController.getPostsByTag)
+router.get('/:id',PostController.getPostById)
+router.get('/search',PostController.searchPosts)
 
 export default router
