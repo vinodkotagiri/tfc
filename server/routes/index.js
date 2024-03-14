@@ -6,4 +6,3 @@ const router=Router()
 router.use('/',userRoutes)
 
 export default router 
-
